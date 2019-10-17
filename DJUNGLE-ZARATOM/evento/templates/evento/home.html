@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Evento FCRS</title>
+
+    <link href="{% static 'evento/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="col-md-6">
+          <img src="{% static 'evento/img/imagem.png'%}" height="100" alt="" />
+      </div>
+
+
+      <div class="col-md-6" id="top">
+        <h1> Seja Bem Vindo ao Sistema do Eventos da FCRS</h1>
+      </div>
+
+
+        <div class="col-md-6">
+          {% for evento in lista_eventos %}
+          <h3>{{evento.nome}}</h3>
+          <h4>{{evento.data}} - {{evento.local}}</h4>
+          <a href="{% url 'mostrar_evento' evento.id %}" class="btn btn-primary">Ir para página do evento</a>
+
+          {% if evento.vagas > eventos.inscricao_set.all.count%}
+          <a href="#" class="btn btn-success">Inscreva-se</a>
+          {% else %}
+          <a href="#" class="btn btn-danger">Vagas esgotadas!</a>
+          {% endif %}
+
+
+          {% endfor %}
+        </div>
+
+
+
+    </div>
+
+  </body>
+</html>

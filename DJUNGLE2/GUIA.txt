@@ -1,0 +1,68 @@
+//===============================
+//instalar python
+
+//===============================
+// atualizar pip
+python -m pip install --upgrade pip
+
+//===============================
+// criando ambiente vitual
+python -m venv dejotavenv
+
+//===============================
+// ativar ambiente
+// WINDOWS
+cd dejotavenv/Scripts/
+activate
+
+// LINUX
+source dejotavenv/bin/activate
+
+//===============================
+// instalar django
+pip install django
+
+//===============================
+// criar projeto
+// criando uma pasta
+django-admin startproject nomeProjeto
+
+// no diretorio atual
+django-admin startproject nomeProjeto .
+
+//===============================
+// criar app
+python manage.py startapp nomeApp
+
+//===============================
+// criar banco de dados
+python manage.py migrate
+
+//===============================
+// rodar servidor
+python manage.py runserver
+
+
+//===============================
+// criar super usuario
+python manage.py createsuperuser
+
+//===============================
+// criando model e migrando
+python manage.py makermigrate
+python manage.py migrate
+
+//===============================
+//
+
+//===============================
+//
+
+//===============================
+//
+
+//===============================
+//
+
+//===============================
+//
